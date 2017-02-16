@@ -1,0 +1,1 @@
+1.这是一个通过UICollectionView来图片轮播的功能模块，开发者只需要将模块导入项目之中，然后通过CocoaPods导入SDWebImage、Masonry就可以直接使用了.
