@@ -10,4 +10,6 @@
 
 @interface NMCycleScrollViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) UIImageView *imageView;
+
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NMWebViewController : UIViewController
+@interface NMWebViewController : UIViewController<UIWebViewDelegate>
+
+@property (nonatomic,copy) NSString *urlString;
 
 @end

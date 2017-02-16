@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class UIImage;
 @interface NMCycleScrollViewModel : NSObject
+
+/**
+ 默认显示在scrollView上的图片
+ */
+@property (nonatomic, strong) UIImage *image;
+
+
+/**
+ 显示在scrollView上的图片
+ */
+@property (nonatomic, copy) NSString *urlString;
 
 @end

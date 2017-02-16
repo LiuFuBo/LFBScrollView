@@ -10,4 +10,21 @@
 
 @implementation NMCycleScrollViewCell
 
+-(instancetype)initWithFrame:(CGRect)frame{
+
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self.contentView addSubview:self.imageView = [UIImageView new]];
+    }
+    return self;
+}
+
+-(void)layoutSubviews{
+    
+    [super layoutSubviews];
+    self.imageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+}
+
+
+
 @end

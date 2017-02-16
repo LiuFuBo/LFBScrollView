@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NMHeaderModel.h"
+
 
 @interface NMHeaderView : UIView
+
+@property (nonatomic, copy) NSArray<NMHeaderModel *> *dataSource;
+
+-(void)p_clickScrollViewImageWithBlock:(void (^)(NSString *clickUrl))clickUrl;
 
 @end

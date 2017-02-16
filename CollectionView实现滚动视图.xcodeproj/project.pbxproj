@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E10F5B8C6A043A8E44ECCCE /* libPods-CollectionView实现滚动视图UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A732475BD5754AD433277066 /* libPods-CollectionView实现滚动视图UITests.a */; };
+		67A787C639E876C8680F0839 /* libPods-CollectionView实现滚动视图Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51993303A9DC66A062591C40 /* libPods-CollectionView实现滚动视图Tests.a */; };
+		8910DEDB1E54337B00764B86 /* NMHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8910DEDA1E54337B00764B86 /* NMHeaderView.m */; };
+		8910DEDE1E5434DE00764B86 /* NMHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8910DEDD1E5434DE00764B86 /* NMHeaderModel.m */; };
+		8910DEE21E543D1400764B86 /* NMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8910DEE11E543D1400764B86 /* NMWebViewController.m */; };
 		894E136F1E52A076005D8FBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E136E1E52A076005D8FBB /* main.m */; };
 		894E13721E52A076005D8FBB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13711E52A076005D8FBB /* AppDelegate.m */; };
 		894E13751E52A076005D8FBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13741E52A076005D8FBB /* ViewController.m */; };
@@ -15,6 +20,10 @@
 		894E137D1E52A076005D8FBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894E137B1E52A076005D8FBB /* LaunchScreen.storyboard */; };
 		894E13881E52A076005D8FBB /* CollectionView______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13871E52A076005D8FBB /* CollectionView______Tests.m */; };
 		894E13931E52A076005D8FBB /* CollectionView______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13921E52A076005D8FBB /* CollectionView______UITests.m */; };
+		894E13A31E52A0D8005D8FBB /* NMCycleScrollViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13A21E52A0D8005D8FBB /* NMCycleScrollViewModel.m */; };
+		894E13A61E52A1C4005D8FBB /* NMCycleScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13A51E52A1C4005D8FBB /* NMCycleScrollViewCell.m */; };
+		894E13A91E52DCE0005D8FBB /* NMCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13A81E52DCE0005D8FBB /* NMCycleScrollView.m */; };
+		F6F8BA1436553933F620F34E /* libPods-CollectionView实现滚动视图.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D9EA261338B913F48FC57B /* libPods-CollectionView实现滚动视图.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30F5C03EBBC240361FBBEF7E /* Pods-CollectionView实现滚动视图.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionView实现滚动视图.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionView实现滚动视图/Pods-CollectionView实现滚动视图.release.xcconfig"; sourceTree = "<group>"; };
+		51993303A9DC66A062591C40 /* libPods-CollectionView实现滚动视图Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollectionView实现滚动视图Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DCE047D057A8446B1CE5EAE /* Pods-CollectionView实现滚动视图Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionView实现滚动视图Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionView实现滚动视图Tests/Pods-CollectionView实现滚动视图Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		8910DED91E54337B00764B86 /* NMHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMHeaderView.h; sourceTree = "<group>"; };
+		8910DEDA1E54337B00764B86 /* NMHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMHeaderView.m; sourceTree = "<group>"; };
+		8910DEDC1E5434DE00764B86 /* NMHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMHeaderModel.h; sourceTree = "<group>"; };
+		8910DEDD1E5434DE00764B86 /* NMHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMHeaderModel.m; sourceTree = "<group>"; };
+		8910DEE01E543D1400764B86 /* NMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMWebViewController.h; sourceTree = "<group>"; };
+		8910DEE11E543D1400764B86 /* NMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMWebViewController.m; sourceTree = "<group>"; };
 		894E136A1E52A076005D8FBB /* CollectionView实现滚动视图.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CollectionView实现滚动视图.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		894E136E1E52A076005D8FBB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		894E13701E52A076005D8FBB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +69,18 @@
 		894E138E1E52A076005D8FBB /* CollectionView实现滚动视图UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CollectionView实现滚动视图UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		894E13921E52A076005D8FBB /* CollectionView______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CollectionView______UITests.m"; sourceTree = "<group>"; };
 		894E13941E52A076005D8FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		894E13A11E52A0D8005D8FBB /* NMCycleScrollViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCycleScrollViewModel.h; sourceTree = "<group>"; };
+		894E13A21E52A0D8005D8FBB /* NMCycleScrollViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCycleScrollViewModel.m; sourceTree = "<group>"; };
+		894E13A41E52A1C4005D8FBB /* NMCycleScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCycleScrollViewCell.h; sourceTree = "<group>"; };
+		894E13A51E52A1C4005D8FBB /* NMCycleScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCycleScrollViewCell.m; sourceTree = "<group>"; };
+		894E13A71E52DCE0005D8FBB /* NMCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCycleScrollView.h; sourceTree = "<group>"; };
+		894E13A81E52DCE0005D8FBB /* NMCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCycleScrollView.m; sourceTree = "<group>"; };
+		98D9EA261338B913F48FC57B /* libPods-CollectionView实现滚动视图.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollectionView实现滚动视图.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A732475BD5754AD433277066 /* libPods-CollectionView实现滚动视图UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollectionView实现滚动视图UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A85CE5EC4D02D827DDA6C628 /* Pods-CollectionView实现滚动视图UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionView实现滚动视图UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionView实现滚动视图UITests/Pods-CollectionView实现滚动视图UITests.release.xcconfig"; sourceTree = "<group>"; };
+		C2233DC5FDE44CA8CACA8E5B /* Pods-CollectionView实现滚动视图UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionView实现滚动视图UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionView实现滚动视图UITests/Pods-CollectionView实现滚动视图UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E55D9A279182E9C901172076 /* Pods-CollectionView实现滚动视图Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionView实现滚动视图Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionView实现滚动视图Tests/Pods-CollectionView实现滚动视图Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EBE0025A133AC0E4DA10550B /* Pods-CollectionView实现滚动视图.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionView实现滚动视图.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionView实现滚动视图/Pods-CollectionView实现滚动视图.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F8BA1436553933F620F34E /* libPods-CollectionView实现滚动视图.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67A787C639E876C8680F0839 /* libPods-CollectionView实现滚动视图Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,19 +104,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E10F5B8C6A043A8E44ECCCE /* libPods-CollectionView实现滚动视图UITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D7D8AC769F1665F9F332EE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98D9EA261338B913F48FC57B /* libPods-CollectionView实现滚动视图.a */,
+				51993303A9DC66A062591C40 /* libPods-CollectionView实现滚动视图Tests.a */,
+				A732475BD5754AD433277066 /* libPods-CollectionView实现滚动视图UITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8910DED81E54334B00764B86 /* NMHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				8910DED91E54337B00764B86 /* NMHeaderView.h */,
+				8910DEDA1E54337B00764B86 /* NMHeaderView.m */,
+				8910DEDC1E5434DE00764B86 /* NMHeaderModel.h */,
+				8910DEDD1E5434DE00764B86 /* NMHeaderModel.m */,
+			);
+			path = NMHeaderView;
+			sourceTree = "<group>";
+		};
+		8910DEDF1E543D0300764B86 /* NMWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8910DEE01E543D1400764B86 /* NMWebViewController.h */,
+				8910DEE11E543D1400764B86 /* NMWebViewController.m */,
+			);
+			path = NMWebViewController;
+			sourceTree = "<group>";
+		};
 		894E13611E52A076005D8FBB = {
 			isa = PBXGroup;
 			children = (
+				894E13A01E52A0B4005D8FBB /* NMCycleScrollView */,
+				8910DED81E54334B00764B86 /* NMHeaderView */,
+				8910DEDF1E543D0300764B86 /* NMWebViewController */,
 				894E136C1E52A076005D8FBB /* CollectionView实现滚动视图 */,
 				894E13861E52A076005D8FBB /* CollectionView实现滚动视图Tests */,
 				894E13911E52A076005D8FBB /* CollectionView实现滚动视图UITests */,
 				894E136B1E52A076005D8FBB /* Products */,
+				C63186217FDC12C75F86D25F /* Pods */,
+				3D7D8AC769F1665F9F332EE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +208,32 @@
 			path = "CollectionView实现滚动视图UITests";
 			sourceTree = "<group>";
 		};
+		894E13A01E52A0B4005D8FBB /* NMCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				894E13A71E52DCE0005D8FBB /* NMCycleScrollView.h */,
+				894E13A81E52DCE0005D8FBB /* NMCycleScrollView.m */,
+				894E13A41E52A1C4005D8FBB /* NMCycleScrollViewCell.h */,
+				894E13A51E52A1C4005D8FBB /* NMCycleScrollViewCell.m */,
+				894E13A11E52A0D8005D8FBB /* NMCycleScrollViewModel.h */,
+				894E13A21E52A0D8005D8FBB /* NMCycleScrollViewModel.m */,
+			);
+			path = NMCycleScrollView;
+			sourceTree = "<group>";
+		};
+		C63186217FDC12C75F86D25F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0025A133AC0E4DA10550B /* Pods-CollectionView实现滚动视图.debug.xcconfig */,
+				30F5C03EBBC240361FBBEF7E /* Pods-CollectionView实现滚动视图.release.xcconfig */,
+				5DCE047D057A8446B1CE5EAE /* Pods-CollectionView实现滚动视图Tests.debug.xcconfig */,
+				E55D9A279182E9C901172076 /* Pods-CollectionView实现滚动视图Tests.release.xcconfig */,
+				C2233DC5FDE44CA8CACA8E5B /* Pods-CollectionView实现滚动视图UITests.debug.xcconfig */,
+				A85CE5EC4D02D827DDA6C628 /* Pods-CollectionView实现滚动视图UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 894E13971E52A076005D8FBB /* Build configuration list for PBXNativeTarget "CollectionView实现滚动视图" */;
 			buildPhases = (
+				289DF877FC5EEAB0580FB6AD /* [CP] Check Pods Manifest.lock */,
 				894E13661E52A076005D8FBB /* Sources */,
 				894E13671E52A076005D8FBB /* Frameworks */,
 				894E13681E52A076005D8FBB /* Resources */,
+				FF63205E49A8023FAF3E844A /* [CP] Embed Pods Frameworks */,
+				57AA01E30003DA27D45E7025 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +261,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 894E139A1E52A076005D8FBB /* Build configuration list for PBXNativeTarget "CollectionView实现滚动视图Tests" */;
 			buildPhases = (
+				19AE7D8D216B386761B3A02B /* [CP] Check Pods Manifest.lock */,
 				894E137F1E52A076005D8FBB /* Sources */,
 				894E13801E52A076005D8FBB /* Frameworks */,
 				894E13811E52A076005D8FBB /* Resources */,
+				225878D6544D4E3E63AACC9F /* [CP] Embed Pods Frameworks */,
+				9074661B1DC431F70BEB5551 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 894E139D1E52A076005D8FBB /* Build configuration list for PBXNativeTarget "CollectionView实现滚动视图UITests" */;
 			buildPhases = (
+				BE46333F0D1498EF6ED4ED5B /* [CP] Check Pods Manifest.lock */,
 				894E138A1E52A076005D8FBB /* Sources */,
 				894E138B1E52A076005D8FBB /* Frameworks */,
 				894E138C1E52A076005D8FBB /* Resources */,
+				DACB922B0362A3F0929C96C2 /* [CP] Embed Pods Frameworks */,
+				89579C83BDC19D0ED34353A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,6 +310,7 @@
 				TargetAttributes = {
 					894E13691E52A076005D8FBB = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 9ZP4Z7C98A;
 						ProvisioningStyle = Automatic;
 					};
 					894E13821E52A076005D8FBB = {
@@ -268,14 +372,158 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19AE7D8D216B386761B3A02B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		225878D6544D4E3E63AACC9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CollectionView实现滚动视图Tests/Pods-CollectionView实现滚动视图Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		289DF877FC5EEAB0580FB6AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57AA01E30003DA27D45E7025 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CollectionView实现滚动视图/Pods-CollectionView实现滚动视图-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89579C83BDC19D0ED34353A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CollectionView实现滚动视图UITests/Pods-CollectionView实现滚动视图UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9074661B1DC431F70BEB5551 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CollectionView实现滚动视图Tests/Pods-CollectionView实现滚动视图Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE46333F0D1498EF6ED4ED5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DACB922B0362A3F0929C96C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CollectionView实现滚动视图UITests/Pods-CollectionView实现滚动视图UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF63205E49A8023FAF3E844A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CollectionView实现滚动视图/Pods-CollectionView实现滚动视图-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		894E13661E52A076005D8FBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				894E13751E52A076005D8FBB /* ViewController.m in Sources */,
+				894E13A31E52A0D8005D8FBB /* NMCycleScrollViewModel.m in Sources */,
+				8910DEDB1E54337B00764B86 /* NMHeaderView.m in Sources */,
 				894E13721E52A076005D8FBB /* AppDelegate.m in Sources */,
+				894E13A91E52DCE0005D8FBB /* NMCycleScrollView.m in Sources */,
+				894E13A61E52A1C4005D8FBB /* NMCycleScrollViewCell.m in Sources */,
 				894E136F1E52A076005D8FBB /* main.m in Sources */,
+				8910DEE21E543D1400764B86 /* NMWebViewController.m in Sources */,
+				8910DEDE1E5434DE00764B86 /* NMHeaderModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +596,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -395,6 +644,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -420,9 +670,12 @@
 		};
 		894E13981E52A076005D8FBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBE0025A133AC0E4DA10550B /* Pods-CollectionView实现滚动视图.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9ZP4Z7C98A;
 				INFOPLIST_FILE = "CollectionView实现滚动视图/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "liufubo.mac1.CollectionView------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -431,9 +684,12 @@
 		};
 		894E13991E52A076005D8FBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30F5C03EBBC240361FBBEF7E /* Pods-CollectionView实现滚动视图.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9ZP4Z7C98A;
 				INFOPLIST_FILE = "CollectionView实现滚动视图/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "liufubo.mac1.CollectionView------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,6 +698,7 @@
 		};
 		894E139B1E52A076005D8FBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DCE047D057A8446B1CE5EAE /* Pods-CollectionView实现滚动视图Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "CollectionView实现滚动视图Tests/Info.plist";
@@ -454,6 +711,7 @@
 		};
 		894E139C1E52A076005D8FBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E55D9A279182E9C901172076 /* Pods-CollectionView实现滚动视图Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "CollectionView实现滚动视图Tests/Info.plist";
@@ -466,6 +724,7 @@
 		};
 		894E139E1E52A076005D8FBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2233DC5FDE44CA8CACA8E5B /* Pods-CollectionView实现滚动视图UITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "CollectionView实现滚动视图UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -477,6 +736,7 @@
 		};
 		894E139F1E52A076005D8FBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A85CE5EC4D02D827DDA6C628 /* Pods-CollectionView实现滚动视图UITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "CollectionView实现滚动视图UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -505,6 +765,7 @@
 				894E13991E52A076005D8FBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		894E139A1E52A076005D8FBB /* Build configuration list for PBXNativeTarget "CollectionView实现滚动视图Tests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +774,7 @@
 				894E139C1E52A076005D8FBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		894E139D1E52A076005D8FBB /* Build configuration list for PBXNativeTarget "CollectionView实现滚动视图UITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +783,7 @@
 				894E139F1E52A076005D8FBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
