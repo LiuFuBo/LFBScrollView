@@ -1,0 +1,2 @@
+# LFBScrollView
+这是一个通过UICollectionView来实现的网络图片滚动播放功能的demo，我已经将其封装成了一个工具类模块，开发者只需要导入自己项目中就可以使用了
