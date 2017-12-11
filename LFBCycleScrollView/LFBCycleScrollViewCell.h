@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NMCycleScrollViewCell : UICollectionViewCell
+@interface LFBCycleScrollViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) UIImageView *imageView;
 

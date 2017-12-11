@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class UIImage;
-@interface NMCycleScrollViewModel : NSObject
+@interface LFBCycleScrollViewModel : NSObject
 
 /**
  默认显示在scrollView上的图片

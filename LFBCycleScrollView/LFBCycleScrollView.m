@@ -6,8 +6,8 @@
 //  Copyright © 2017年 mac1. All rights reserved.
 //
 
-#import "NMCycleScrollView.h"
-#import "NMCycleScrollViewCell.h"
+#import "LFBCycleScrollView.h"
+#import "LFBCycleScrollViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "UIView+WebCache.h"
 
@@ -16,9 +16,9 @@
 
 static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
 
-@interface NMCycleScrollView ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface LFBCycleScrollView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) NSMutableArray<NMCycleScrollViewModel *> *showData;
+@property (nonatomic, strong) NSMutableArray<LFBCycleScrollViewModel *> *showData;
 @property (nonatomic, assign) NSInteger firstIndex;
 @property (nonatomic, assign) NSInteger lastIndex;
 @property (nonatomic, assign) NSInteger currentIndex;
@@ -28,7 +28,7 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
 
 @end
 
-@implementation NMCycleScrollView
+@implementation LFBCycleScrollView
 
 
 - (instancetype)init
@@ -90,8 +90,8 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 
-    NMCycleScrollViewModel *model = self.showData[indexPath.row];
-    NMCycleScrollViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kNMCycleScrollViewCellID forIndexPath:indexPath];
+    LFBCycleScrollViewModel *model = self.showData[indexPath.row];
+    LFBCycleScrollViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kNMCycleScrollViewCellID forIndexPath:indexPath];
     cell.imageView.image = model.image;
     
     cell.imageView.contentMode = self.contentModeForImage;
@@ -257,7 +257,7 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.backgroundColor = [UIColor clearColor];
         
-        [_collectionView registerClass:[NMCycleScrollViewCell class] forCellWithReuseIdentifier:kNMCycleScrollViewCellID];
+        [_collectionView registerClass:[LFBCycleScrollViewCell class] forCellWithReuseIdentifier:kNMCycleScrollViewCellID];
     }
     return _collectionView;
 }
@@ -272,7 +272,7 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
     return _pageControl;
 }
 
--(void)setDataSources:(NSArray<NMCycleScrollViewModel *> *)dataSources{
+-(void)setDataSources:(NSArray<LFBCycleScrollViewModel *> *)dataSources{
     _dataSources = dataSources;
   
     if (dataSources.count == 0) {

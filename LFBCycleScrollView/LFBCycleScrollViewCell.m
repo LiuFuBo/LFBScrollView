@@ -6,9 +6,9 @@
 //  Copyright © 2017年 mac1. All rights reserved.
 //
 
-#import "NMCycleScrollViewCell.h"
+#import "LFBCycleScrollViewCell.h"
 
-@implementation NMCycleScrollViewCell
+@implementation LFBCycleScrollViewCell
 
 -(instancetype)initWithFrame:(CGRect)frame{
 

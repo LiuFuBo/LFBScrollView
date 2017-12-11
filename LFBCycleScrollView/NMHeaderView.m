@@ -7,12 +7,12 @@
 //
 
 #import "NMHeaderView.h"
-#import "NMCycleScrollView.h"
+#import "LFBCycleScrollView.h"
 #import "Masonry.h"
 
 @interface NMHeaderView ()<NMCycleScrollViewDelegate>
 
-@property (nonatomic, strong) NMCycleScrollView *cycleScrollView;
+@property (nonatomic, strong) LFBCycleScrollView *cycleScrollView;
 
 @end
 
@@ -38,7 +38,7 @@
 
 #pragma mark - NMCycleScrollViewDelegate
 
--(void)cycleScrollView:(NMCycleScrollView *)cycleScrollView selectedAtIndex:(NSUInteger)currentIndex{
+-(void)cycleScrollView:(LFBCycleScrollView *)cycleScrollView selectedAtIndex:(NSUInteger)currentIndex{
     NMHeaderModel *model = self.dataSource[currentIndex];
     _clickScrollViewBlock(model.clickUrl);
 }
@@ -47,9 +47,9 @@
 
 -(void)setDataSource:(NSArray<NMHeaderModel *> *)dataSource{
     _dataSource = dataSource.copy;
-    NSMutableArray<NMCycleScrollViewModel *> *models = [NSMutableArray array];
+    NSMutableArray<LFBCycleScrollViewModel *> *models = [NSMutableArray array];
    [dataSource enumerateObjectsUsingBlock:^(NMHeaderModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-       NMCycleScrollViewModel *model = [NMCycleScrollViewModel new];
+       LFBCycleScrollViewModel *model = [LFBCycleScrollViewModel new];
        model.urlString = obj.imageUrl;
        model.image = obj.image;
        [models addObject:model];
@@ -57,10 +57,10 @@
     self.cycleScrollView.dataSources = models.copy;
 }
 
--(NMCycleScrollView *)cycleScrollView{
+-(LFBCycleScrollView *)cycleScrollView{
 
     if (!_cycleScrollView) {
-        _cycleScrollView = [[NMCycleScrollView alloc]init];
+        _cycleScrollView = [[LFBCycleScrollView alloc]init];
         _cycleScrollView.delegate = self;
     }
     return _cycleScrollView;

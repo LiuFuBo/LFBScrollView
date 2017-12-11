@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NMCycleScrollViewModel.h"
+#import "LFBCycleScrollViewModel.h"
 
-@class NMCycleScrollView;
+@class LFBCycleScrollView;
 @protocol NMCycleScrollViewDelegate <NSObject>
 
 @optional
@@ -21,7 +21,7 @@
  @param currentIndex 当前索引，从0开始
  @param isAuto 是否为自动滚动，如果是定时器自动滑动的则为YES否则NO
  */
--(void)cycleScrollView:(NMCycleScrollView *)cycleScrollView endScrollAtCurrentIndex:(NSUInteger)currentIndex isAuto:(BOOL)isAuto;
+-(void)cycleScrollView:(LFBCycleScrollView *)cycleScrollView endScrollAtCurrentIndex:(NSUInteger)currentIndex isAuto:(BOOL)isAuto;
 
 /**
  视图当前滚动的回调
@@ -29,7 +29,7 @@
  @param cycleScrollView self
  @param currentIndex 当前索引，从0开始
  */
--(void)cycleScrollView:(NMCycleScrollView *)cycleScrollView cellAtIndex:(NSUInteger)currentIndex;
+-(void)cycleScrollView:(LFBCycleScrollView *)cycleScrollView cellAtIndex:(NSUInteger)currentIndex;
 
 
 /**
@@ -38,17 +38,17 @@
  @param cycleScrollView self
  @param currentIndex 当前索引，从0开始
  */
--(void)cycleScrollView:(NMCycleScrollView *)cycleScrollView selectedAtIndex:(NSUInteger)currentIndex;
+-(void)cycleScrollView:(LFBCycleScrollView *)cycleScrollView selectedAtIndex:(NSUInteger)currentIndex;
 
 @end
 
-@class NMCycleScrollViewModel;
-@interface NMCycleScrollView : UIView
+@class LFBCycleScrollViewModel;
+@interface LFBCycleScrollView : UIView
 
 /**
  数据源，配置配置scrollView显示内容
  */
-@property (nonatomic, strong) NSArray<NMCycleScrollViewModel *> *dataSources;
+@property (nonatomic, strong) NSArray<LFBCycleScrollViewModel *> *dataSources;
 
 /**
  pageControl,页面控制器，如不需要设置hidden=YES

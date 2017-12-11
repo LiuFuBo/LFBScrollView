@@ -6,8 +6,8 @@
 //  Copyright © 2017年 mac1. All rights reserved.
 //
 
-#import "NMCycleScrollViewModel.h"
+#import "LFBCycleScrollViewModel.h"
 
-@implementation NMCycleScrollViewModel
+@implementation LFBCycleScrollViewModel
 
 @end

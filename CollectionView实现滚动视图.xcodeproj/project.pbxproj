@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		4E10F5B8C6A043A8E44ECCCE /* libPods-CollectionView实现滚动视图UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A732475BD5754AD433277066 /* libPods-CollectionView实现滚动视图UITests.a */; };
 		67A787C639E876C8680F0839 /* libPods-CollectionView实现滚动视图Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51993303A9DC66A062591C40 /* libPods-CollectionView实现滚动视图Tests.a */; };
-		8910DEDB1E54337B00764B86 /* NMHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8910DEDA1E54337B00764B86 /* NMHeaderView.m */; };
-		8910DEDE1E5434DE00764B86 /* NMHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8910DEDD1E5434DE00764B86 /* NMHeaderModel.m */; };
+		6817BCCD1FDE3CFE0008447E /* LFBCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6817BCC81FDE3CFE0008447E /* LFBCycleScrollView.m */; };
+		6817BCCE1FDE3CFE0008447E /* LFBCycleScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6817BCCA1FDE3CFE0008447E /* LFBCycleScrollViewCell.m */; };
+		6817BCCF1FDE3CFE0008447E /* LFBCycleScrollViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6817BCCC1FDE3CFE0008447E /* LFBCycleScrollViewModel.m */; };
+		6817BCD41FDE5C5D0008447E /* NMHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6817BCD11FDE5C5D0008447E /* NMHeaderModel.m */; };
+		6817BCD51FDE5C5D0008447E /* NMHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6817BCD31FDE5C5D0008447E /* NMHeaderView.m */; };
 		8910DEE21E543D1400764B86 /* NMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8910DEE11E543D1400764B86 /* NMWebViewController.m */; };
 		894E136F1E52A076005D8FBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E136E1E52A076005D8FBB /* main.m */; };
 		894E13721E52A076005D8FBB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13711E52A076005D8FBB /* AppDelegate.m */; };
@@ -20,9 +23,6 @@
 		894E137D1E52A076005D8FBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894E137B1E52A076005D8FBB /* LaunchScreen.storyboard */; };
 		894E13881E52A076005D8FBB /* CollectionView______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13871E52A076005D8FBB /* CollectionView______Tests.m */; };
 		894E13931E52A076005D8FBB /* CollectionView______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13921E52A076005D8FBB /* CollectionView______UITests.m */; };
-		894E13A31E52A0D8005D8FBB /* NMCycleScrollViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13A21E52A0D8005D8FBB /* NMCycleScrollViewModel.m */; };
-		894E13A61E52A1C4005D8FBB /* NMCycleScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13A51E52A1C4005D8FBB /* NMCycleScrollViewCell.m */; };
-		894E13A91E52DCE0005D8FBB /* NMCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E13A81E52DCE0005D8FBB /* NMCycleScrollView.m */; };
 		F6F8BA1436553933F620F34E /* libPods-CollectionView实现滚动视图.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D9EA261338B913F48FC57B /* libPods-CollectionView实现滚动视图.a */; };
 /* End PBXBuildFile section */
 
@@ -47,10 +47,16 @@
 		30F5C03EBBC240361FBBEF7E /* Pods-CollectionView实现滚动视图.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionView实现滚动视图.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionView实现滚动视图/Pods-CollectionView实现滚动视图.release.xcconfig"; sourceTree = "<group>"; };
 		51993303A9DC66A062591C40 /* libPods-CollectionView实现滚动视图Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollectionView实现滚动视图Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCE047D057A8446B1CE5EAE /* Pods-CollectionView实现滚动视图Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionView实现滚动视图Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionView实现滚动视图Tests/Pods-CollectionView实现滚动视图Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8910DED91E54337B00764B86 /* NMHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMHeaderView.h; sourceTree = "<group>"; };
-		8910DEDA1E54337B00764B86 /* NMHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMHeaderView.m; sourceTree = "<group>"; };
-		8910DEDC1E5434DE00764B86 /* NMHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMHeaderModel.h; sourceTree = "<group>"; };
-		8910DEDD1E5434DE00764B86 /* NMHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMHeaderModel.m; sourceTree = "<group>"; };
+		6817BCC71FDE3CFE0008447E /* LFBCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFBCycleScrollView.h; sourceTree = "<group>"; };
+		6817BCC81FDE3CFE0008447E /* LFBCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFBCycleScrollView.m; sourceTree = "<group>"; };
+		6817BCC91FDE3CFE0008447E /* LFBCycleScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFBCycleScrollViewCell.h; sourceTree = "<group>"; };
+		6817BCCA1FDE3CFE0008447E /* LFBCycleScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFBCycleScrollViewCell.m; sourceTree = "<group>"; };
+		6817BCCB1FDE3CFE0008447E /* LFBCycleScrollViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFBCycleScrollViewModel.h; sourceTree = "<group>"; };
+		6817BCCC1FDE3CFE0008447E /* LFBCycleScrollViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFBCycleScrollViewModel.m; sourceTree = "<group>"; };
+		6817BCD01FDE5C5D0008447E /* NMHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMHeaderModel.h; sourceTree = "<group>"; };
+		6817BCD11FDE5C5D0008447E /* NMHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMHeaderModel.m; sourceTree = "<group>"; };
+		6817BCD21FDE5C5D0008447E /* NMHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMHeaderView.h; sourceTree = "<group>"; };
+		6817BCD31FDE5C5D0008447E /* NMHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMHeaderView.m; sourceTree = "<group>"; };
 		8910DEE01E543D1400764B86 /* NMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMWebViewController.h; sourceTree = "<group>"; };
 		8910DEE11E543D1400764B86 /* NMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMWebViewController.m; sourceTree = "<group>"; };
 		894E136A1E52A076005D8FBB /* CollectionView实现滚动视图.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CollectionView实现滚动视图.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,12 +75,6 @@
 		894E138E1E52A076005D8FBB /* CollectionView实现滚动视图UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CollectionView实现滚动视图UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		894E13921E52A076005D8FBB /* CollectionView______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CollectionView______UITests.m"; sourceTree = "<group>"; };
 		894E13941E52A076005D8FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		894E13A11E52A0D8005D8FBB /* NMCycleScrollViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCycleScrollViewModel.h; sourceTree = "<group>"; };
-		894E13A21E52A0D8005D8FBB /* NMCycleScrollViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCycleScrollViewModel.m; sourceTree = "<group>"; };
-		894E13A41E52A1C4005D8FBB /* NMCycleScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCycleScrollViewCell.h; sourceTree = "<group>"; };
-		894E13A51E52A1C4005D8FBB /* NMCycleScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCycleScrollViewCell.m; sourceTree = "<group>"; };
-		894E13A71E52DCE0005D8FBB /* NMCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCycleScrollView.h; sourceTree = "<group>"; };
-		894E13A81E52DCE0005D8FBB /* NMCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCycleScrollView.m; sourceTree = "<group>"; };
 		98D9EA261338B913F48FC57B /* libPods-CollectionView实现滚动视图.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollectionView实现滚动视图.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A732475BD5754AD433277066 /* libPods-CollectionView实现滚动视图UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollectionView实现滚动视图UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A85CE5EC4D02D827DDA6C628 /* Pods-CollectionView实现滚动视图UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionView实现滚动视图UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollectionView实现滚动视图UITests/Pods-CollectionView实现滚动视图UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,15 +121,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8910DED81E54334B00764B86 /* NMHeaderView */ = {
+		6817BCC61FDE3CFE0008447E /* LFBCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				8910DED91E54337B00764B86 /* NMHeaderView.h */,
-				8910DEDA1E54337B00764B86 /* NMHeaderView.m */,
-				8910DEDC1E5434DE00764B86 /* NMHeaderModel.h */,
-				8910DEDD1E5434DE00764B86 /* NMHeaderModel.m */,
+				6817BCD21FDE5C5D0008447E /* NMHeaderView.h */,
+				6817BCD31FDE5C5D0008447E /* NMHeaderView.m */,
+				6817BCD01FDE5C5D0008447E /* NMHeaderModel.h */,
+				6817BCD11FDE5C5D0008447E /* NMHeaderModel.m */,
+				6817BCC71FDE3CFE0008447E /* LFBCycleScrollView.h */,
+				6817BCC81FDE3CFE0008447E /* LFBCycleScrollView.m */,
+				6817BCC91FDE3CFE0008447E /* LFBCycleScrollViewCell.h */,
+				6817BCCA1FDE3CFE0008447E /* LFBCycleScrollViewCell.m */,
+				6817BCCB1FDE3CFE0008447E /* LFBCycleScrollViewModel.h */,
+				6817BCCC1FDE3CFE0008447E /* LFBCycleScrollViewModel.m */,
 			);
-			path = NMHeaderView;
+			path = LFBCycleScrollView;
 			sourceTree = "<group>";
 		};
 		8910DEDF1E543D0300764B86 /* NMWebViewController */ = {
@@ -144,8 +150,7 @@
 		894E13611E52A076005D8FBB = {
 			isa = PBXGroup;
 			children = (
-				894E13A01E52A0B4005D8FBB /* NMCycleScrollView */,
-				8910DED81E54334B00764B86 /* NMHeaderView */,
+				6817BCC61FDE3CFE0008447E /* LFBCycleScrollView */,
 				8910DEDF1E543D0300764B86 /* NMWebViewController */,
 				894E136C1E52A076005D8FBB /* CollectionView实现滚动视图 */,
 				894E13861E52A076005D8FBB /* CollectionView实现滚动视图Tests */,
@@ -206,19 +211,6 @@
 				894E13941E52A076005D8FBB /* Info.plist */,
 			);
 			path = "CollectionView实现滚动视图UITests";
-			sourceTree = "<group>";
-		};
-		894E13A01E52A0B4005D8FBB /* NMCycleScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				894E13A71E52DCE0005D8FBB /* NMCycleScrollView.h */,
-				894E13A81E52DCE0005D8FBB /* NMCycleScrollView.m */,
-				894E13A41E52A1C4005D8FBB /* NMCycleScrollViewCell.h */,
-				894E13A51E52A1C4005D8FBB /* NMCycleScrollViewCell.m */,
-				894E13A11E52A0D8005D8FBB /* NMCycleScrollViewModel.h */,
-				894E13A21E52A0D8005D8FBB /* NMCycleScrollViewModel.m */,
-			);
-			path = NMCycleScrollView;
 			sourceTree = "<group>";
 		};
 		C63186217FDC12C75F86D25F /* Pods */ = {
@@ -516,14 +508,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				894E13751E52A076005D8FBB /* ViewController.m in Sources */,
-				894E13A31E52A0D8005D8FBB /* NMCycleScrollViewModel.m in Sources */,
-				8910DEDB1E54337B00764B86 /* NMHeaderView.m in Sources */,
 				894E13721E52A076005D8FBB /* AppDelegate.m in Sources */,
-				894E13A91E52DCE0005D8FBB /* NMCycleScrollView.m in Sources */,
-				894E13A61E52A1C4005D8FBB /* NMCycleScrollViewCell.m in Sources */,
 				894E136F1E52A076005D8FBB /* main.m in Sources */,
 				8910DEE21E543D1400764B86 /* NMWebViewController.m in Sources */,
-				8910DEDE1E5434DE00764B86 /* NMHeaderModel.m in Sources */,
+				6817BCCD1FDE3CFE0008447E /* LFBCycleScrollView.m in Sources */,
+				6817BCD51FDE5C5D0008447E /* NMHeaderView.m in Sources */,
+				6817BCCE1FDE3CFE0008447E /* LFBCycleScrollViewCell.m in Sources */,
+				6817BCCF1FDE3CFE0008447E /* LFBCycleScrollViewModel.m in Sources */,
+				6817BCD41FDE5C5D0008447E /* NMHeaderModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
