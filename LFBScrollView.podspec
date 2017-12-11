@@ -4,7 +4,8 @@ Pod::Spec.new do |s|
   s.name         = "LFBScrollView" #名字
   s.version      = "1.0.0" #版本号
   s.summary      = "这是用于滚动视图播放的框架" #简介
-   A framework about the rolling of the page.
+  s.description = <<-DESC
+  A framework about the rolling of the page.
  DESC
 
 
