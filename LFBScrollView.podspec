@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "LFBScrollView" #名字
+  s.name         = "LFBScrollView"  #名字
   s.version      = "1.0.0" #版本号
   s.summary      = "这是用于滚动视图播放的框架" #简介
   s.description = <<-DESC
