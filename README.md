@@ -56,13 +56,8 @@ pod 'LFBScrollView'
 </code></pre>
 
 
-3、设置代理
+3、设置 NMCycleScrollViewDelegate代理
 
-<pre><code>
-
-@interface ViewController () <NMCycleScrollViewDelegate>
-
-</code></pre>
 
 4、配置滚动图片资源
 
