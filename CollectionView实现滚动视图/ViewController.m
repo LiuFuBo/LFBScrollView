@@ -7,13 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "NMHeaderView.h"
+#import "LFBHeaderView.h"
 #import "NMWebViewController.h"
-#import "NMHeaderModel.h"
+#import "LFBHeaderModel.h"
 #import "Masonry.h"
 
 @interface ViewController ()
-@property (nonatomic, strong) NMHeaderView *scrollHeaderView;
+@property (nonatomic, strong) LFBHeaderView *scrollHeaderView;
 @end
 
 @implementation ViewController
@@ -35,10 +35,10 @@
     [self initSubViews];
     [self initLayout];
     [self initData];
-    [_scrollHeaderView p_clickScrollViewImageWithBlock:^(NSString *clickUrl) {
-        if (clickUrl) {
+    [_scrollHeaderView p_clickScrollViewImageWithBlock:^(LFBHeaderModel *clickItem) {
+        if (clickItem.clickUrl) {
             NMWebViewController *webVc = [NMWebViewController new];
-            webVc.urlString = clickUrl;
+            webVc.urlString = clickItem.clickUrl;
             webVc.title = @"网页";
             [self nm_pushViewController:webVc animation:YES];
         }
@@ -55,17 +55,17 @@
 
 -(void)initLayout{
     [self.scrollHeaderView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.insets(UIEdgeInsetsZero);
+        make.left.top.right.mas_equalTo(self.view);
+        make.height.mas_equalTo(240);
     }];
 }
 
 -(void)initData{
 
-    NSMutableArray<NMHeaderModel *> *dataSource = [NSMutableArray array];
-    
+    NSMutableArray<LFBHeaderModel *> *dataSource = [NSMutableArray array];
     {
-        NMHeaderModel *model = [NMHeaderModel new];
-        model.imageUrl = @"http://car0.autoimg.cn/upload/spec/9579/u_20120110174805627264.jpg";
+        LFBHeaderModel *model = [LFBHeaderModel new];
+        model.imageUrl = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555560633714&di=0c5f9b0985aea877fc6df6f8f5354a9b&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F25%2F56%2F29%2F58396c9c1a3a4_1024.jpg";
         model.clickUrl = @"http://www.baidu.com";
         model.image = [UIImage imageNamed:@"first.png"];
         [dataSource addObject:model];
@@ -73,8 +73,8 @@
     
     {
 
-        NMHeaderModel *model = [NMHeaderModel new];
-        model.imageUrl = @"http://hiphotos.baidu.com/lvpics/pic/item/3a86813d1fa41768bba16746.jpg";
+        LFBHeaderModel *model = [LFBHeaderModel new];
+        model.imageUrl = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555560685661&di=97c79deb059d4573342902f3a3bbca98&imgtype=0&src=http%3A%2F%2Fimg15.3lian.com%2F2015%2Fa1%2F13%2Fd%2F6.jpg";
         model.clickUrl = @"http://www.baidu.com";
         model.image = [UIImage imageNamed:@"mid.png"];
         [dataSource addObject:model];
@@ -82,8 +82,8 @@
 
     {
         
-        NMHeaderModel *model = [NMHeaderModel new];
-        model.imageUrl = @"http://hiphotos.baidu.com/lvpics/pic/item/3a86813d1fa41768bba16746.jpg";
+        LFBHeaderModel *model = [LFBHeaderModel new];
+        model.imageUrl = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555560705802&di=c642e2c84b6b04e5d7d178e4858b7a85&imgtype=0&src=http%3A%2F%2Fwww.hubei.gov.cn%2Fmlhb%2Flyms%2Fxyjq%2F201205%2FW020120531559128275377.jpg";
         model.clickUrl = @"http://www.baidu.com";
         model.image = [UIImage imageNamed:@"last.png"];
         [dataSource addObject:model];
@@ -91,10 +91,10 @@
     _scrollHeaderView.dataSource = dataSource.mutableCopy;
 }
 
--(NMHeaderView *)scrollHeaderView{
+-(LFBHeaderView *)scrollHeaderView{
 
     if (!_scrollHeaderView) {
-        _scrollHeaderView = [NMHeaderView new];
+        _scrollHeaderView = [LFBHeaderView new];
     }
     return _scrollHeaderView;
 }

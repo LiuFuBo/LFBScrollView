@@ -7,6 +7,8 @@
 //
 
 #import "LFBCycleScrollViewCell.h"
+#import "Masonry.h"
+
 
 @implementation LFBCycleScrollViewCell
 
@@ -14,17 +16,38 @@
 
     self = [super initWithFrame:frame];
     if (self) {
-        [self.contentView addSubview:self.imageView = [UIImageView new]];
+        [self.contentView addSubview:self.imageView];
     }
     return self;
 }
 
--(void)layoutSubviews{
-    
-    [super layoutSubviews];
-    self.imageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+- (void)setAutoFullScreen:(BOOL)autoFullScreen{
+    _autoFullScreen = autoFullScreen;
+    if (autoFullScreen) {
+        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.insets(UIEdgeInsetsZero);
+        }];
+    }else{
+        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.leftMargin);
+            make.bottom.mas_equalTo(-self.bottomMargin);
+            make.top.mas_equalTo(self.topMargin);
+            make.right.mas_equalTo(-self.rightMargin);
+        }];
+    }
 }
 
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
+}
+
+- (UIImageView *)imageView{
+    return _imageView?:({
+        _imageView = [[UIImageView alloc]init];
+        _imageView;
+    });
+}
 
 
 @end

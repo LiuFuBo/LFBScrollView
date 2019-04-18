@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 @class UIImage;
-@interface LFBCycleScrollViewModel : NSObject
+@interface LFBCycleScrollViewModel : NSObject<NSCopying,NSMutableCopying>
+
+//图片id 作为有参数的跳转Id
+@property (nonatomic, copy) NSString *id;
 
 /**
  默认显示在scrollView上的图片
@@ -20,5 +25,8 @@
  显示在scrollView上的图片
  */
 @property (nonatomic, copy) NSString *urlString;
+
+
+
 
 @end

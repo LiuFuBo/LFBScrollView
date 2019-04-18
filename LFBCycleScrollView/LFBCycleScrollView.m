@@ -9,7 +9,9 @@
 #import "LFBCycleScrollView.h"
 #import "LFBCycleScrollViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "UIGestureRecognizer+LFBAdd.h"
 #import "UIView+WebCache.h"
+#import "Masonry.h"
 
 
 #define _NMCycleScrollViewIsResponds(__obj,__selMethod)(__obj && [__obj respondsToSelector:__selMethod])
@@ -22,7 +24,7 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
 @property (nonatomic, assign) NSInteger firstIndex;
 @property (nonatomic, assign) NSInteger lastIndex;
 @property (nonatomic, assign) NSInteger currentIndex;
-
+@property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) dispatch_source_t timer;
 
@@ -41,6 +43,7 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
         
         self.timeInterval = 3;
         self.autoScroll = YES;
+        self.autoFullScreen = YES;
         self.contentModeForImage = UIViewContentModeScaleToFill;
         self.backgroundColor = [UIColor whiteColor];
     }
@@ -58,6 +61,7 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
         
         self.timeInterval = 3;
         self.autoScroll = YES;
+        self.autoFullScreen = YES;
         self.contentModeForImage = UIViewContentModeScaleToFill;
         self.backgroundColor = [UIColor whiteColor];
     }
@@ -67,19 +71,21 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
 
 -(void)drawRect:(CGRect)rect{
 
-    if (self.dataSources.count == 0) {
+    if (self.dataSources.count == 0 || self.dataSources.count == 1) {
         return;
     }
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
-
 }
 
 -(void)layoutSubviews{
     [super layoutSubviews];
     self.collectionView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     ((UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout).itemSize = CGSizeMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
-    self.pageControl.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 20, CGRectGetWidth(self.frame), 20);
-
+    if (self.bottomMargin > 0) {
+     self.pageControl.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 20 - self.bottomMargin, CGRectGetWidth(self.frame), 20);
+    }else{
+     self.pageControl.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 20, CGRectGetWidth(self.frame), 20);
+    }
 }
 
 #pragma mark - collectionView
@@ -93,12 +99,18 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
     LFBCycleScrollViewModel *model = self.showData[indexPath.row];
     LFBCycleScrollViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kNMCycleScrollViewCellID forIndexPath:indexPath];
     cell.imageView.image = model.image;
-    
     cell.imageView.contentMode = self.contentModeForImage;
-   
+    cell.imageView.clipsToBounds = YES;
+    if (self.imageConeradius > 0) {
+        cell.imageView.layer.cornerRadius = self.imageConeradius;
+        cell.imageView.layer.masksToBounds = YES;
+    }
+    cell.leftMargin = self.leftMargin;
+    cell.topMargin = self.topMargin;
+    cell.rightMargin = self.rightMargin;
+    cell.bottomMargin = self.bottomMargin;
+    cell.autoFullScreen = self.autoFullScreen;
     if (model.urlString) {
-        [cell.imageView sd_setShowActivityIndicatorView:YES];
-        [cell.imageView sd_setIndicatorStyle:UIActivityIndicatorViewStyleGray];
         [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.urlString] placeholderImage:self.placeholderImage?:model.image];
     }
     return cell;
@@ -142,6 +154,7 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
     if (!_dataSources) {
         return;
     }
+    
     if (_dataSources.count>1) {
         self.showData = [NSMutableArray arrayWithCapacity:3];
         
@@ -152,8 +165,7 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
         self.showData[0] = _dataSources[self.firstIndex];
         self.showData[1] = _dataSources.firstObject;
         self.showData[2] = _dataSources[self.lastIndex];
-    }
-    else{
+    }else{
         self.showData = [NSMutableArray arrayWithObject:_dataSources.firstObject];
     }
 }
@@ -234,14 +246,15 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
     __weak typeof(self) weak_self = self;
     dispatch_source_set_event_handler(self.timer, ^{
         __strong typeof(weak_self) strong_self = weak_self;
-        strong_self.collectionView.userInteractionEnabled = NO;
-        [strong_self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            strong_self.collectionView.userInteractionEnabled = NO;
+            [strong_self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+        });
     });
     dispatch_resume(self.timer);
 }
 
 #pragma mark - gettter & setter
-
 -(UICollectionView *)collectionView{
  
     if (!_collectionView) {
@@ -274,15 +287,50 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
 
 -(void)setDataSources:(NSArray<LFBCycleScrollViewModel *> *)dataSources{
     _dataSources = dataSources;
-  
+    [self.imageView removeFromSuperview];
     if (dataSources.count == 0) {
         return;
+    }else if (_dataSources.count == 1){
+        [self setAutoScroll:NO];
+        LFBCycleScrollViewModel *model = [dataSources objectAtIndex:0];
+        self.imageView = [[UIImageView alloc]init];
+        if (self.imageConeradius > 0) {
+            self.imageView.layer.cornerRadius = 10;
+            self.imageView.layer.masksToBounds = YES;
+        }
+        [self.imageView setHidden:NO];
+        self.imageView.contentMode = self.contentModeForImage;
+        self.imageView.clipsToBounds = YES;
+        [self.imageView setUserInteractionEnabled:YES];
+        [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.urlString] placeholderImage:model.image];
+        [self addSubview:self.imageView];
+        if (self.autoFullScreen) {
+            [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.edges.insets(UIEdgeInsetsZero);
+            }];
+        }else{
+            [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.mas_equalTo(self.leftMargin);
+                make.top.mas_equalTo(self.topMargin);
+                make.right.mas_equalTo(-self.rightMargin);
+                make.bottom.mas_equalTo(-self.bottomMargin);
+            }];
+        }
+        __weak typeof(self) weakSelf = self;
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithActionBlock:^(id  _Nonnull sender) {
+            __strong typeof(self) strongSelf =weakSelf;
+            [self.delegate cycleScrollView:strongSelf selectedAtIndex:0];
+        }];
+        [tapGesture setNumberOfTapsRequired:1];
+        [tapGesture setNumberOfTouchesRequired:1];
+        [self.imageView addGestureRecognizer:tapGesture];
+        return;
     }
-    
     [self p_initShowData];
     [self.collectionView reloadData];
     self.pageControl.numberOfPages = dataSources.count;
-    
+    self.pageControl.currentPage = 0;
+    self.currentIndex = 0;
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     
     if (self.timer) {
@@ -291,6 +339,16 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
     }
     
     [self p_configureTimer];
+}
+
+- (void)setPageIndicatorTintColor:(UIColor *)pageIndicatorTintColor{
+    _pageIndicatorTintColor = pageIndicatorTintColor;
+    [self.pageControl setPageIndicatorTintColor:pageIndicatorTintColor];
+}
+
+- (void)setCurrentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor{
+    _currentPageIndicatorTintColor = currentPageIndicatorTintColor;
+    [self.pageControl setCurrentPageIndicatorTintColor:currentPageIndicatorTintColor];
 }
 
 -(void)setTimeInterval:(NSTimeInterval)timeInterval{
@@ -316,14 +374,13 @@ static NSString *const kNMCycleScrollViewCellID = @"kNMCycleScrollViewCellID";
     if (autoScroll && self.timeInterval >0) {
         [self p_configureTimer];
     }
-
 }
 
-
-
-
-
-
-
+- (UIImageView *)imageView{
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc]init];
+    }
+    return _imageView;
+}
 
 @end

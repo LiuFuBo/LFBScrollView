@@ -80,6 +80,50 @@
  */
 @property (nonatomic, assign) UIViewContentMode contentModeForImage;
 
+/**
+ 分页未选中指示器颜色 default is lightGrayColor
+ */
+@property (nonatomic, strong) UIColor *pageIndicatorTintColor;
+
+/**
+ 分页选中指示器颜色 default is cyanColor
+ */
+@property (nonatomic, strong) UIColor *currentPageIndicatorTintColor;
+
+/**
+ 图片圆角,当圆角大于零则生效
+ */
+@property (nonatomic, assign) CGFloat imageConeradius;
+
+
+/**
+ 是否满屏展示,默认为YES,  当不满屏时，设置边距有效
+ */
+@property (nonatomic, assign) BOOL autoFullScreen;
+
+
+/**
+ 左间距
+ */
+@property (nonatomic, assign) CGFloat leftMargin;
+
+
+/**
+ 上边距
+ */
+@property (nonatomic, assign) CGFloat topMargin;
+
+
+/**
+ 右边距
+ */
+@property (nonatomic, assign) CGFloat rightMargin;
+
+
+/**
+ 下边距
+ */
+@property (nonatomic, assign) CGFloat bottomMargin;
 
 
 

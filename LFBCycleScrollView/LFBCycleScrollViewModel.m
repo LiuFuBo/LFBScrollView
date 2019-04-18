@@ -10,4 +10,20 @@
 
 @implementation LFBCycleScrollViewModel
 
+- (id)copyWithZone:(NSZone *)zone{
+    LFBCycleScrollViewModel *model = [[LFBCycleScrollViewModel alloc]init];
+    model.id = self.id;
+    model.image = self.image;
+    model.urlString = self.urlString;
+    return model;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone{
+    LFBCycleScrollViewModel *model = [[LFBCycleScrollViewModel alloc]init];
+    model.id = self.id;
+    model.image = self.image;
+    model.urlString = self.urlString;
+    return model;
+}
+
 @end
