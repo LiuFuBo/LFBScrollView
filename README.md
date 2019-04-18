@@ -39,7 +39,7 @@ pod 'LFBScrollView'
 #import "LFBCycleScrollViewModel.h"
 </code></pre>
 
-2、初始化LFBCycleScrollView对象并设置代理
+2、初始化LFBCycleScrollView对象
 <pre><code>
 
 @property (nonatomic, strong) LFBCycleScrollView *cycleScrollView;
@@ -60,7 +60,7 @@ pod 'LFBScrollView'
 
 <pre><code>
 
-@interface ViewController ()<NMCycleScrollViewDelegate>
+@interface ViewController () <NMCycleScrollViewDelegate>
 
 </code></pre>
 
@@ -119,6 +119,6 @@ pod 'LFBScrollView'
 
 下载DEMO可更快上手
 
-### 注:目前推荐用户在该框架基础上做二次封装来满足项目需要，目前框架传入数据model，仅包含图片链接地址，默认本地图片，以及扩展图片id，大多数时候用户点击滚动Banner，需要的是跳转指定页面并且传参，而这个参数是根据请求返回的，您可以在仿照该框架DEMO，再次封装，内部进行model对接，方便使用。当然，你也可以通过LFBScrollView的代理方法点击事件根据index下标来处理相关业务。
+注:目前推荐用户在该框架基础上做二次封装来满足项目需要，目前框架传入数据model，仅包含图片链接地址，默认本地图片，以及扩展图片id，大多数时候用户点击滚动Banner，需要的是跳转指定页面并且传参，而这个参数是根据请求返回的，您可以在仿照该框架DEMO，再次封装，内部进行model对接，方便使用。当然，你也可以通过LFBScrollView的代理方法点击事件根据index下标来处理相关业务。
 
 
