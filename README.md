@@ -4,7 +4,7 @@ LFBScrollView
 ![Cocoapods](https://img.shields.io/badge/pod-v2.0.0-greenLFBModleFile.svg)&nbsp;
 ![Cocoapods](https://img.shields.io/badge/platform-osx%20%7C%20ios-LFBModelFile.svg)&nbsp;
 
-LFBScrollView一款简单易容的Banner滚动框架
+LFBScrollView一款简单易用的Banner滚动框架
 
 ## LFBScrollView 提供了哪些功能？
 
